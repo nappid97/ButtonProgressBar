@@ -1,5 +1,6 @@
 package github.ishaan.buttonprogressbar;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
@@ -25,7 +26,7 @@ public class ButtonProgressBar extends View {
     private String mInitialText = "DOWNLOAD";
     private int mTextSize;
     private int mTextColor, mBackgroundColor, mProgressColor;
-    private int mCornerRadius = 30;
+    private int mCornerRadius = 60;
     private Bitmap mTickBitmap;
     public int indeterminateState = -1;
     private final int topX = 0, topY = 0, MIN = 0, MAX = 100;
