@@ -9,8 +9,10 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.RectF;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v7.widget.AppCompatDrawableManager;
 import android.util.AttributeSet;
@@ -37,6 +39,7 @@ public class ButtonProgressBar extends View {
     private final static int STATE_RESET = -1, STATE_START = 1, STATE_STOP = 0, API_LEVEL_LOLLIPOP = 21;
     private static final int DEFAULT_BGCOLOR = Color.parseColor("#0E8DD4"),
             DEFAULT_PROGCOLOR = Color.parseColor("#0399E5");
+    private Typeface typeface;
 
     public ButtonProgressBar(Context context) {
         super(context);
@@ -96,6 +99,7 @@ public class ButtonProgressBar extends View {
     public void textPaint() {
         mTextPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mTextPaint.setColor(mTextColor);
+        mTextPaint.setTypeface(ResourcesCompat.getFont(getContext(), R.font.fortnite));
         mTextPaint.setTextSize(mTextSize);
         mTextPaint.setStyle(Paint.Style.FILL_AND_STROKE);
     }
