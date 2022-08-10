@@ -101,6 +101,7 @@ public class ButtonProgressBar extends View {
         mTextPaint.setColor(mTextColor);
         mTextPaint.setTypeface(ResourcesCompat.getFont(getContext(), R.font.fortnite));
         mTextPaint.setTextSize(mTextSize);
+        mTextPaint.setElegantTextHeight(true);
         mTextPaint.setStyle(Paint.Style.FILL_AND_STROKE);
     }
 
